@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-
+@section('content')
 <h1>contact</h1>
 <a href="/contacts/create">Create a contact</a>
 <ul>
@@ -12,3 +12,4 @@
         </li>
     @endforeach
 </ul>
+@endsection

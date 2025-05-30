@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <h1>Edit Book</h1>
 
 <form action="/books/{{ $book->id }}" method="POST">
@@ -27,4 +30,4 @@
 </div>
 <input type="submit" value = "edit">
 </form>
-
+@endsection

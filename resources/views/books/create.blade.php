@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <h1>New Book</h1>
 
 <form action="/books" method="post">
@@ -45,3 +48,4 @@
 
     <button type="submit" class="btn btn-primary">Create</button>
 </form>
+@endsection

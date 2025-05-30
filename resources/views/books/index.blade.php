@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <h1>Books</h1>
 <a href="/books/create">Create a book</a>
 <ul>
@@ -13,3 +16,4 @@
         </li>
     @endforeach
 </ul>
+@endsection

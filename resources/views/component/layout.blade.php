@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     
-    <title>@yield('title', config('app.name', 'Laravel'))</title>
+    <title>{{ $title ?? config('app.name', 'Laravel') }}</title>
 </head>
 <body>
     <header>
@@ -18,7 +18,7 @@
                 <ul class="navbar-nav">
                     <li><a href="{{ route('home') }}">Home</a></li>
                     <li><a href="{{ route('contacts.index') }}">Contacts</a></li>
-                    <li><a href="{{ route('books.index') }}">books</a></li>
+                    <li><a href="{{ route('books.index') }}">Books</a></li>
                 </ul>
             </div>
         </nav>
@@ -26,9 +26,8 @@
 
     <main class="main-content">
         <div class="container">
-            @yield('content')
+            {{ $slot }}
         </div>
     </main>
-
 </body>
 </html>
