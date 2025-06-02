@@ -18,10 +18,12 @@
             </div>
         </nav>
     </header>
+
     <main class="main-content">
         <div class="container">
-            {{ $slot }}
+         {{ $slot }}
         </div>
     </main>
+
 </body>
 </html>
