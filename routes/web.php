@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ImageController;
 use App\Models\Book;
 
 Route::get('/', function () {
@@ -28,3 +29,11 @@ Route::get('/home', function () {
 Route::get('/about', function () {
     return view('about');
 })->name('about');
+
+Route::get('/image', [ImageController::class, 'index'])->name('image.index');
+Route::get('/image/create', [ImageController::class, 'create'])->name('image.create');
+Route::post('/image', [ImageController::class, 'store'])->name('image.store');
+Route::get('/image/{image}', [ImageController::class, 'show'])->name('image.show');
+Route::get('/image/{image}/edit', [ImageController::class, 'edit'])->name('image.edit');
+Route::put('/image/{image}', [ImageController::class, 'update'])->name('image.update');
+Route::delete('/image/{image}/destroy', [ImageController::class, 'destroy'])->name('image.destroy');
