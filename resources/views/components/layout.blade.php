@@ -14,6 +14,7 @@
                     <li><a href="{{ route('home') }}">Home</a></li>
                     <li><a href="{{ route('contacts.index') }}">Contacts</a></li>
                     <li><a href="{{ route('books.index') }}">books</a></li>
+                    <li><a href="{{ route('image.index') }}">Images</a></li>
                 </ul>
             </div>
         </nav>
